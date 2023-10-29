@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsapp contact form</title>
+</head>
+<body>
+    <form action="POST">
+        <label for="name">Full name</label>
+        <input type="text" name="fn" id="name" placeholder="enter name" />
+        <button type="button" name="bt" onclick="whatsapp()">submit</button>
+    </form>
+    <script>
+        function whatsapp(){
+            var name=document.getElementById("name").value;
+        
+        var url = "https://wa.me/918076023060?text="+"name "+name +"%0a";
+        window.open(url,'_blank').focus();
+        }
+    </script>
+</body>
+</html>
